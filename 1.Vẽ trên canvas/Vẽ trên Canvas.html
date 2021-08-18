@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vẽ trên Canvas</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200" height="100" style="border:3px solid black;>dfd</canvas>
+<canvas id="myCanvass" width="200" height="100">dfd</canvas>
+<canvas id="myCanva" width="200" height="100">dfd</canvas>
+<canvas id="mCanvas" width="200" height="100" style="border:3px solid black;">dfd</canvas>
+<canvas id="Canvas" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas>
+<canvas id="myCanvasss" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas>
+<script>
+var painting = document.getElementById("myCanvas");
+var ctx = painting.getContext("2d");
+ctx.moveTo(5,5);
+    ctx.lineTo(300,100);
+    ctx.stroke();
+
+</script>
+<script>
+    var painting = document.getElementById("MyCanvass");
+    var ctx = painting.getContext("2d");
+    ctx.beginPath();
+    ctx.arc(80,60,60,6,7*Math.PI);
+    ctx.stroke();
+</script>
+<script>
+    var painting = document.getElementById("myCanva");
+    var ctx = painting.getContext("2d");
+    ctx.font = "30px Arial";
+    ctx.fillText("Hello World", 20 ,30)
+</script>
+<script>
+    var painting = document.getElementById("mCanvas");
+    var ctx = painting.getContext("2d");
+    ctx.font = "30px Arial";
+    ctx.fillText("Hello World", 20 ,30)
+
+</script>
+<script>
+    var painting = document.getElementById("Canvas");
+    var ctx = painting.getContext("2d");
+    var  grd = ctx.createLinearGradient(0,0,200,0);
+        grd.addColorStop(0,"red");
+    grd.addColorStop(1,"white");
+    ctx.fillStyle = grd;
+    ctx.fillRect(20,20,200,90)
+
+</script>
+<script>
+    var painting = document.getElementById("myCanvasss");
+    var ctx = painting.getContext("2d");
+    var grd = ctx.createLinearGradient(80,60,5,100,60,150);
+    grd.addColorStop(0,"red");
+    grd.addColorStop(1,"white");
+    ctx.fillStyle = grd;
+    ctx.fillRect(10,10,150,80)
+</script>
+</body>
+</html>
